@@ -1,7 +1,4 @@
-define (function(require, exports){
-  var $ = require('jquery');
 
-  var Carousel = (function(){
     function carousel($ct) {
       this.$ct = $ct;
       this.init();
@@ -40,7 +37,6 @@ define (function(require, exports){
         e.preventDefault();
         _this.playNext();
       })
-      console.log(this.$imgCt.width())
     }
     
     carousel.prototype.playPre = function(){
@@ -83,8 +79,5 @@ define (function(require, exports){
         .eq(this.curPageIndex)
         .addClass('active')
     }
-    
-    
-  })();
-  return Carousel;
-})
+
+  new carousel($('.carousel'));
